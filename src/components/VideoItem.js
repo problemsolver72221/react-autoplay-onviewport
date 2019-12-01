@@ -26,11 +26,6 @@ const VideoItem = ({ name, description, videoLink, height }) => {
           playing={isVisible ? true : false}
           width="100%"
           height={height}
-          config={{
-            youtube: {
-              playerVars: { autoplay: 0 }
-            }
-          }}
         />
         <div>
           <p

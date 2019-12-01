@@ -3,28 +3,28 @@ const sampleData = [
     name: "Winter",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    videoLink: "https://www.youtube.com/watch?v=ftgX04OOmNw",
+    videoLink: "https://vimeo.com/293286734",
     height: "250px"
   },
   {
     name: "Autumn",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    videoLink: "https://www.youtube.com/watch?v=Vlb83YCzDlY",
+    videoLink: "https://vimeo.com/2323616",
     height: "400px"
   },
   {
     name: "Spring",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    videoLink: "https://www.youtube.com/watch?v=uo3uQo42vS8",
+    videoLink: "https://vimeo.com/64643064",
     height: "200px"
   },
   {
     name: "Summer",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    videoLink: "https://www.youtube.com/watch?v=Rtmwmo1U5AM",
+    videoLink: "https://vimeo.com/27111452",
     height: "500px"
   }
 ];
