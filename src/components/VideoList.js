@@ -11,13 +11,16 @@ const VideoList = ({ data }) => {
       <ul>
         {data.map((d, index) => {
           return (
-            <li key={index} style={{ listStyle: "none" }}>
-              <VideoItem
-                name={d.name}
-                description={d.description}
-                videoLink={d.videoLink}
-                height={d.height}
-              />
+            <li
+              key={index}
+              className="video-viewport-container"
+              style={{ listStyle: "none" }}
+            >
+              <h2 style={{ padding: "15px" }}>{d.name}</h2>
+              <VideoItem videoLink={d.videoLink} />
+              <p
+                style={{ fontSize: "11pt", padding: "15px" }}
+              >{`${d.description}`}</p>
             </li>
           );
         })}

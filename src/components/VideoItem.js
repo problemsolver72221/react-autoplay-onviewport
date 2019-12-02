@@ -3,7 +3,7 @@ import propTypes from "prop-types";
 import ReactPlayer from "react-player";
 import VisibilitySensor from "react-visibility-sensor";
 
-const VideoItem = ({ name, description, videoLink, height }) => {
+const VideoItem = ({ videoLink }) => {
   const [isVisible, onChange] = useState({
     isVisible: false,
     onChange: isVisible => {
@@ -13,35 +13,27 @@ const VideoItem = ({ name, description, videoLink, height }) => {
 
   return (
     <VisibilitySensor onChange={onChange}>
-      <div
-        className={
-          isVisible
-            ? "video-viewport-container active"
-            : "video-viewport-container"
-        }
-      >
-        <h2 style={{ padding: "15px 0" }}>{name}</h2>
+      <div className="player-container">
         <ReactPlayer
           url={videoLink}
           playing={isVisible ? true : false}
           width="100%"
-          height={height}
+          height="100%"
+          config={{
+            vimeo: {
+              playerOptions: {
+                controls: isVisible ? true : false
+              }
+            }
+          }}
         />
-        <div>
-          <p
-            style={{ fontSize: "11pt", padding: "20px 0" }}
-          >{`${description}`}</p>
-        </div>
       </div>
     </VisibilitySensor>
   );
 };
 
 VideoItem.propTypes = {
-  name: propTypes.string.isRequired,
-  description: propTypes.string.isRequired,
-  videoLink: propTypes.string.isRequired,
-  height: propTypes.string.isRequired
+  videoLink: propTypes.string.isRequired
 };
 
 export default VideoItem;
